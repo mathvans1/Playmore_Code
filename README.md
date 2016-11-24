@@ -1,2 +1,5 @@
 # Playmore_Code
-Enkel de code voor nmdad1
+# Mathias Van Sele & Jonatan Moerman
+
+Eindopdracht NMDAD-I
+Artevelde Hogeschool
