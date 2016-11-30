@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
     <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.teal-blue.min.css" />
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="sass/main.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
@@ -42,7 +42,7 @@
                         <span class="mdl-layout-title"><a href="index.html"><img src="assets/android-icon-48x48.png"></a></span>
                         <nav class="mdl-navigation main_gone">
                             <a class="mdl-navigation__link" href="index.html"><i class="material-icons">home</i></a>
-                            <a class="mdl-navigation__link" href="#">Basisscholen</a>
+                            <a class="mdl-navigation__link" [ngClass]="{ 'is-active': isOn}" href="basis.html">Basisscholen</a>
                             <a class="mdl-navigation__link" href="#">speeltereinen</a>
 
                         </nav>

@@ -44,7 +44,6 @@
                 <a class="mdl-navigation__link" href="index.html"><i class="material-icons">home</i></a>
                 <a class="mdl-navigation__link" href="#">Scholen</a>
                 <a class="mdl-navigation__link" href="#">speeltereinen</a>
-                <a class="mdl-navigation__link" href="#">Contact</a>
 
             </nav>
             <!--Spacer -->
@@ -81,38 +80,41 @@
             <i class="material-icons">account_circle</i>
         </a>
     </div>
+
+
+    <!----------------------------------------------------------------------------------------------->
     <div id="main" class="content-grid mdl-grid">
         <div class="mdl-card mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-shadow--2dp">
-            <figure class="mdl-card__media image_fix">
-                <img src="assets/apple-icon-180x180.png" alt="icon" />
-            </figure>
-            <div class="mdl-card__title">
-                <h1 class="mdl-card__title-text">Wie zijn we?</h1>
-            </div>
-            <div class="mdl-card__supporting-text">
-                <p>Hier komt er tekst</p>
+            <div id="login" class="demo-card-square mdl-card">
+                <div class="mdl-card__title mdl-card--expand">
+                    <h2 class="mdl-card__title-text">Login</h2>
+                </div>
+                <div class="mdl-card__supporting-text">
+                    <form id="frm-login">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="txtUserName" name="txtUserName">
+                            <label class="mdl-textfield__label" for="txtUserName">Username</label>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="password" id="txtPassWord" name="txtPassWord">
+                            <label class="mdl-textfield__label" for="txtPassWord">Password</label>
+                        </div>
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+                            Log in
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
         <!-------------------------------------------card2---------------------------------------------->
-        <div class="mdl-card mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-shadow--2dp">
-            <figure class="mdl-card__media image_fix">
-                <img src="assets/apple-icon-180x180.png" alt="icon" />
-            </figure>
-            <div class="mdl-card__title">
-                <h1 class="mdl-card__title-text">Wie zijn we?</h1>
-            </div>
-            <div class="mdl-card__supporting-text">
-                <p>Hier komt er tekst</p>
-            </div>
-        </div>
+
 
     </div>
-
 </main>
 
-                    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-                    <script type="text/javascript" src="js/materialize.min.js"></script>
-                    <script type="text/javascript" src="js/hammer.min.js"></script>
-                    <script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script type="text/javascript" src="js/hammer.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
