@@ -1,3 +1,14 @@
+@media screen and (min-width: 992px) {
+    .mobile_gone{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .main_gone {display: none;}
+}
+
+
 body {
     display: flex;
     min-height: 100vh;

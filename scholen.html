@@ -34,7 +34,10 @@
 <nav class="teal">
     <div class="nav-wrapper">
         <a href="index.html" class="brand-logo logo"><img src="assets/android-icon-48x48.png"></a>
+
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <a href="#" data-activates="slide-out" class="button-collapse right-align">Filter</a>
+
         <ul class="right hide-on-med-and-down">
             <li><a href="scholen.html">Scholen</a></li>
             <li><a href="speelterreinen.html">Speelterreinen</a></li>
@@ -55,9 +58,10 @@
 <main>
     <div class="row">
 
-        <div class="col s3 sidenav">
-            <div class="container">
+        <div class="col s3 sidenav main_gone">
+
                 <div class="col s3">
+                    <h5>Scholen</h5>
                     <form action="#">
                         <p>
                             <input type="checkbox" id="test5" />
@@ -69,12 +73,29 @@
                         </p>
                     </form>
                 </div>
-            </div>
 
         </div>
+        <div class="col s1 mobile_gone"></div>
         <div class="col s9 content">
             <div class="row">
                 <div class="container">
+
+                    <ul id="slide-out" class="side-nav">
+                        <li><div class="userView">
+                            <div class="background">
+                                <img src="images/office.jpg">
+                            </div>
+                            <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
+                            <a href="#!name"><span class="white-text name">John Doe</span></a>
+                            <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+                        </div></li>
+                        <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+                        <li><a href="#!">Second Link</a></li>
+                        <li><div class="divider"></div></li>
+                        <li><a class="subheader">Subheader</a></li>
+                        <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+                    </ul>
+
                     <div class="col s9 m12">
                         <div class="card blue-grey darken-1">
                             <div class="card-content white-text">
