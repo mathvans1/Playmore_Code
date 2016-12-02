@@ -2,31 +2,32 @@ $(document).ready(function(){
     $(".button-collapse").sideNav();
 
 });
-// Name and Password from the register-form
-var regName = document.getElementById('userName');
-var pw = document.getElementById('pw');
 
-// storing input from register-form
+// naam en pas register
+var regiName = document.getElementById('regname');
+var regiPw = document.getElementById('regpw');
+
 function store() {
-    localStorage.setItem('userName', regName.value);
-    localStorage.setItem('pw', pw.value);
+    localStorage.setItem('uName', regiName.value);
+    localStorage.setItem('pw', regiPw.value);
 }
 
-// check if stored data from register-form is equal to entered data in the   login-form
 function check() {
 
-    // stored data from the register-form
-    var storedName = localStorage.getItem('userName');
+
+    var storedName = localStorage.getItem('uName');
     var storedPw = localStorage.getItem('pw');
 
-    // entered data from the login-form
-    var userName = document.getElementById('username');
-    var userPw = document.getElementById('userPw');
 
-    // check if stored data from register-form is equal to data from login form
-    if(userName.value !== storedName || userPw.value !== storedPw) {
-        alert('ERROR');
-    }else {
+    var userName = document.getElementById('logname');
+    var userPw = document.getElementById('logpw');
+
+
+    if(userName.value == storedName && userPw.value == storedPw) {
         alert('You are loged in.');
+    }else {
+        alert('Gebruiker of wachtwoord wordt niet herkend.' + userName);
     }
 }
+
+console.log("Test");
