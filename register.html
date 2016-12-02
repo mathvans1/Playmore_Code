@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Register</title>
 
     <link rel="apple-touch-icon" sizes="57x57" href="/assets/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/assets/apple-icon-60x60.png">
@@ -39,7 +40,6 @@
             <li><a href="scholen.html">Scholen</a></li>
             <li><a href="speelterreinen.html">Speelterreinen</a></li>
             <li><a href="contact.html">Contact</a></li>
-
             <li><a href="login.html"> <i class="material-icons">perm_identity</i></a></li>
 
         </ul>
@@ -47,7 +47,7 @@
             <li><a href="scholen.html">Scholen</a></li>
             <li><a href="speelterreinen.html">Speelterreinen</a></li>
             <li><a href="contact.html">Contact</a></li>
-            li><a href="login.html"> <i class="material-icons">perm_identity</i></a></li>
+            <li><a href="login.html"> <i class="material-icons">perm_identity</i></a></li>
         </ul>
     </div>
 </nav>
@@ -55,9 +55,10 @@
 
 <!-----------------------------------------------------------end nav---------------------------------------------------------->
 <main>
-    <div id="login-page" class="row">
-        <div class="col s4"></div>
-        <div class="col s4 z-depth-4 card-panel">
+    <div class="row">
+    <div class="container">
+        <div id="login-page" class="row">
+        <div class="col s12 z-depth-2 card-panel">
             <form class="login-form">
                 <div class="row">
                     <div class="input-field col s12 center">
@@ -69,7 +70,7 @@
                     <div class="input-field col s12">
                         <i class="mdi-social-person-outline prefix"></i>
                         <input id="regname" type="text">
-                        <label for="regname" class="center-align">Username</label>
+                        <label for="regname" >Username</label>
                     </div>
                 </div>
                 <div class="row margin">
@@ -87,7 +88,7 @@
                      </div>-->
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="rgstr_btn" class="btn waves-effect waves-light col s12" type="submit" value="Registreer" onclick="store()"/>
+                        <a id="rgstr_btn" class="btn waves-effect waves-light col s12" type="submit" onclick="store()">Registreer nu!</a>
                         <!--<a href="#" class="btn waves-effect waves-light col s12">Login</a>-->
                     </div>
                 </div>
@@ -96,7 +97,8 @@
             </form>
         </div>
     </div>
-
+    </div>
+ </div>
 </main>
 
 
