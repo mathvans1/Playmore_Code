@@ -65,12 +65,26 @@
                     <h5>Scholen</h5>
                     <form action="#">
                         <p>
-                            <input type="checkbox" id="test5" />
-                            <label for="test5">Red</label>
+                            <input type="checkbox" id="katholiek_onderwijs" />
+                            <label for="katholiek_onderwijs">Katholiek Onderwijs</label>
                         </p>
+
                         <p>
-                            <input type="checkbox" id="test6" checked="checked" />
-                            <label for="test6">Yellow</label>
+                            <input type="checkbox" id="stedelijk_ondrwijs" />
+                            <label for="stedelijk_ondrwijs">Stedelijk onderwijs</label>
+                        </p>
+
+                        <p>
+                            <input type="checkbox" id="kleuterschool" />
+                            <label for="kleuterschool">Kleuterschool</label>
+                        </p>
+                    </form>
+
+                    <h5>Locatie</h5>
+
+                    <form action="#">
+                        <p class="range-field">km
+                            <input type="range" id="test5" min="0" max="20" value="0" />
                         </p>
                     </form>
                 </div>
@@ -82,19 +96,39 @@
                 <div class="container">
                     <!--Filter-->
                     <ul id="slide-out" class="side-nav">
-                        <li><div class="userView">
-                            <div class="background">
-                                <img src="images/office.jpg">
+
+                            <div class="col ">
+                                <h5>Filter</h5>
+                                <form action="#">
+
+                                    <p>
+                                        <input type="checkbox" id="katholiek_onderwijs_nav" />
+                                        <label for="katholiek_onderwijs_nav">Katholiek Onderwijs</label>
+                                    </p>
+
+                                    <p>
+                                        <input type="checkbox" id="stedelijk_ondrwijs_nav" />
+                                        <label for="stedelijk_ondrwijs_nav">Stedelijk onderwijs</label>
+                                    </p>
+
+                                    <p>
+                                        <input type="checkbox" id="kleuterschool_nav" />
+                                        <label for="kleuterschool_nav">Kleuterschool</label>
+                                    </p>
+
+                                </form>
+
+                                <h5>Locatie</h5>
+
+                                <form action="#">
+                                    <p class="range-field">km
+                                        <input type="range" id="test5*" min="0" max="100" />
+                                    </p>
+                                </form>
+
                             </div>
-                            <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
-                            <a href="#!name"><span class="white-text name">John Doe</span></a>
-                            <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
-                        </div></li>
-                        <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-                        <li><a href="#!">Second Link</a></li>
-                        <li><div class="divider"></div></li>
-                        <li><a class="subheader">Subheader</a></li>
-                        <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+
+
                     </ul>
                     <!--Filter end-->
 
