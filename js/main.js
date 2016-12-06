@@ -24,10 +24,8 @@ function check() {
 
 
     if(userName.value == storedName && userPw.value == storedPw) {
-        alert('You are loged in.');
+        alert('Logged in.');
     }else {
         alert('Gebruiker of wachtwoord wordt niet herkend.' + userName);
     }
 }
-
-console.log("Test");
