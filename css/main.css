@@ -18,18 +18,12 @@ body {
 main {
     flex: 1 0 auto;
 }
-.logo{
+.logo {
     margin-top: 5px;
     margin-left: 5px;
 }
-.sidenav{
-    background-color: lightgray;
-    height: 100%;
-}
 
-.content{
-    background-color: #2a7ae2;
-}
+
 .slide-nav{
     background-color: #2a7ae2;
 }

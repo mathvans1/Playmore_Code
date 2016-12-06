@@ -30,8 +30,8 @@ function check() {
     }
 }
 
-console.log("Test");
 
+/*Scholen************************************************************************************************/
 function ready(cb) {
     /in/.test(document.readyState)
         ? setTimeout(ready.bind(null, cb), 90)
@@ -71,20 +71,29 @@ ready(function(){
                         var tempString ="";
                         for(var i=0; i<n; i++) {
                             school = scholen[i];
-                            var school_naam =(school.ExtendedData.SchemaData.SimpleData[i]['#text']);
+                            var aantalScholen = '<h6>Aantal scholen: '+ n + '</h6>';
+
+                            /*var school_naam =(school.ExtendedData.SchemaData.SimpleData[i]['#text']);*/
+
                             tempString += '<div id="school_name" class="card blue-grey darken-1 z-depth-2">';
                             tempString += '<div class="card-content white-text">';
-                            tempString += '<span class="card-title" >' +school.ExtendedData.SchemaData.SimpleData[4]['#text'];
+                            tempString += '<span class="card-title" >' +school.ExtendedData.SchemaData.SimpleData[3]['#text'];
                             tempString += '</span>';
-                            tempString += '<p>test';
+                            tempString += '<p>' +school.ExtendedData.SchemaData.SimpleData[1]['#text'] + ' ' + school.ExtendedData.SchemaData.SimpleData[14]['#text'];
                             tempString +=  '</p>';
+                            tempString += '<p><a href="mailto:' +school.ExtendedData.SchemaData.SimpleData[16]['#text'];
+                            tempString += '">E-mail</a></br>';
+                            tempString += '<a href="tel:'+ school.ExtendedData.SchemaData.SimpleData[15]['#text'];
+                            tempString += '">' + school.ExtendedData.SchemaData.SimpleData[15]['#text'];
+                            tempString += '</a>';
                             tempString += '<div class="card-action">';
-                            tempString += '<a href="' + school.ExtendedData.SchemaData.SimpleData[17]['#text'];
+                            tempString += '<a class="waves-effect waves-light btn" href="' + school.ExtendedData.SchemaData.SimpleData[17]['#text'];
                             tempString += '">Website</a>';
                             tempString += '</div>';
                             tempString += '</div>';
                             tempString += '</div>';
                             document.getElementById("school_name").innerHTML= tempString;
+                            document.getElementById("aantal_scholen").innerHTML = aantalScholen;
                         }
                     }else {
                         console.log(Error(xhr.status));
