@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 $(document).ready(function(){
     $(".button-collapse").sideNav();
 
@@ -33,7 +32,6 @@ function check() {
 
 console.log("Test");
 
-=======
 function ready(cb) {
     /in/.test(document.readyState)
         ? setTimeout(ready.bind(null, cb), 90)
@@ -44,7 +42,7 @@ ready(function(){
 
     var App = {
         "init": function() {
-            this.URLSCHOOL = './data/resto.json'; // Cache the url with random users in variable URLRANDOMUSERME
+            this.URLSCHOOL = './data/basisschool.json'; // Cache the url with random users in variable URLRANDOMUSERME
 
             this.loadDataResto(); // Load SCHOOL Data
         },
@@ -70,15 +68,30 @@ ready(function(){
                         //Get the received data --> response
                         var data = (!xhr.responseType)?JSON.parse(xhr.response):xhr.response;
                         var scholen = data.kml.Document.Folder.Placemark, n = scholen.length, school = null;
+                        var tempString ="";
                         for(var i=0; i<n; i++) {
                             school = scholen[i];
-                            console.log(school.ExtendedData.SchemaData.SimpleData[4]['#text']);
+                            var school_naam =(school.ExtendedData.SchemaData.SimpleData[i]['#text']);
+                            tempString += '<div id="school_name" class="card blue-grey darken-1 z-depth-2">';
+                            tempString += '<div class="card-content white-text">';
+                            tempString += '<span class="card-title" >' +school.ExtendedData.SchemaData.SimpleData[4]['#text'];
+                            tempString += '</span>';
+                            tempString += '<p>test';
+                            tempString +=  '</p>';
+                            tempString += '<div class="card-action">';
+                            tempString += '<a href="' + school.ExtendedData.SchemaData.SimpleData[17]['#text'];
+                            tempString += '">Website</a>';
+                            tempString += '</div>';
+                            tempString += '</div>';
+                            tempString += '</div>';
+                            document.getElementById("school_name").innerHTML= tempString;
                         }
                     }else {
                         console.log(Error(xhr.status));
                     }
                     break;
                 }
+
             };
             //4. Open the connection or tunnel to the resource on the url
             xhr.open('GET', this.URLSCHOOL, true);
@@ -90,4 +103,4 @@ ready(function(){
     App.init();
 
 });
->>>>>>> origin/master
+
