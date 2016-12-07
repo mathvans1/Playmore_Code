@@ -94,6 +94,7 @@ ready(function(){
                             tempString += '</div>';
                             document.getElementById("school_name").innerHTML= tempString;
                             document.getElementById("aantal_scholen").innerHTML = aantalScholen;
+
                         }
                     }else {
                         console.log(Error(xhr.status));

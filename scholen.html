@@ -65,6 +65,8 @@
                     <h5>Scholen</h5>
                     <div id="aantal_scholen"></div>
                     <form action="#">
+
+                        <h5>Onderwijsnet</h5>
                         <p>
                             <input type="checkbox" id="katholiek_onderwijs" />
                             <label for="katholiek_onderwijs">Katholiek Onderwijs</label>
@@ -76,8 +78,13 @@
                         </p>
 
                         <p>
-                            <input type="checkbox" id="kleuterschool" />
-                            <label for="kleuterschool">Kleuterschool</label>
+                            <input type="checkbox" id="oko" />
+                            <label for="oko">Overleg Kleine Onderwijsverstrekkers</label>
+                        </p>
+
+                        <p>
+                            <input type="checkbox" id="go" />
+                            <label for="go">GO! onderwijs van de Vlaamse Gemeenschap</label>
                         </p>
                     </form>
 
@@ -88,46 +95,69 @@
                             <input type="range" id="test5" min="0" max="20" value="0" />
                         </p>
                     </form>
+
+                    <h5>Zoekveld</h5>
+                    <form>
+                        <div class="input-field">
+                            <input id="search" type="search" required>
+                            <label for="search"></label>
+                            <i class="material-icons">close</i>
+                        </div>
+                    </form>
                 </div>
 
         </div>
 
-        <div class="col s9">
+        <div class="col l9 s12 m12">
             <div class="row">
                 <div class="container">
                     <!--Filter-->
                     <ul id="slide-out" class="side-nav">
 
-                            <div class="col ">
-                                <h5>Filter</h5>
-                                <form action="#">
+                        <div class="col ">
+                            <h5>Scholen</h5>
+                            <div id="aantal_scholen_filter"></div>
+                            <form action="#">
 
-                                    <p>
-                                        <input type="checkbox" id="katholiek_onderwijs_nav" />
-                                        <label for="katholiek_onderwijs_nav">Katholiek Onderwijs</label>
-                                    </p>
+                                <h5>Onderwijsnet</h5>
+                                <p>
+                                    <input type="checkbox" id="katholiek_onderwijs_filter" />
+                                    <label for="katholiek_onderwijs_filter">Katholiek Onderwijs</label>
+                                </p>
 
-                                    <p>
-                                        <input type="checkbox" id="stedelijk_ondrwijs_nav" />
-                                        <label for="stedelijk_ondrwijs_nav">Stedelijk onderwijs</label>
-                                    </p>
+                                <p>
+                                    <input type="checkbox" id="stedelijk_ondrwijs_filter" />
+                                    <label for="stedelijk_ondrwijs_filter">Stedelijk onderwijs</label>
+                                </p>
 
-                                    <p>
-                                        <input type="checkbox" id="kleuterschool_nav" />
-                                        <label for="kleuterschool_nav">Kleuterschool</label>
-                                    </p>
+                                <p>
+                                    <input type="checkbox" id="oko_filter" />
+                                    <label for="oko_filter">Overleg Kleine Onderwijsverstrekkers</label>
+                                </p>
 
-                                </form>
+                                <p>
+                                    <input type="checkbox" id="go_filter" />
+                                    <label for="go_filter">GO! onderwijs van de Vlaamse Gemeenschap</label>
+                                </p>
+                            </form>
 
-                                <h5>Locatie</h5>
+                            <h5>Locatie</h5>
 
-                                <form action="#">
-                                    <p class="range-field">km
-                                        <input type="range" id="test5*" min="0" max="100" />
-                                    </p>
-                                </form>
+                            <form action="#">
+                                <p class="range-field">km
+                                    <input type="range" id="test5_filter" min="0" max="20" value="0" />
+                                </p>
+                            </form>
 
-                            </div>
+                            <h5>Zoekveld</h5>
+                            <form>
+                                <div class="input-field">
+                                    <input id="search_nav" type="search" required>
+                                    <label for="search"></label>
+                                    <i class="material-icons">close</i>
+                                </div>
+                            </form>
+                        </div>
 
 
                     </ul>
