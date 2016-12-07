@@ -30,7 +30,6 @@ function check() {
     }
 }
 
-
 /*Scholen************************************************************************************************/
 function ready(cb) {
     /in/.test(document.readyState)
