@@ -30,6 +30,10 @@ function check() {
     }
 }
 
+$(document).ready(function(){
+    $('.parallax').parallax();
+});
+
 /*Scholen************************************************************************************************/
 function ready(cb) {
     /in/.test(document.readyState)
