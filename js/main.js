@@ -47,9 +47,9 @@ ready(function(){
         "init": function() {
             this.URLSCHOOL = './data/basisschool.json'; // Cache the url with random users in variable URLRANDOMUSERME
 
-            this.loadDataResto(); // Load SCHOOL Data
+            this.loadDataSchool(); // Load SCHOOL Data
         },
-        "loadDataResto": function() {
+        "loadDataSchool": function() {
             //1. Create a XMLHttpRequest object (Send to and load data from a WebAPI)
             var xhr = typeof XMLHttpRequest != undefined
                 ? new XMLHttpRequest()
@@ -120,4 +120,76 @@ ready(function(){
 $(document).ready(function(){
     $('.parallax').parallax();
 });
+/*Speelterein**************************************************************************************/
+
+
+ready(function(){
+
+    var App = {
+        "init": function() {
+            this.URLSPEEL = './data/speelterrein.json'; // Cache the url with random users in variable URLRANDOMUSERME
+
+            this.loadDataSpeel(); // Load SPEEL Data
+        },
+        "loadDataSpeel": function() {
+            //1. Create a XMLHttpRequest object (Send to and load data from a WebAPI)
+            var xhr = typeof XMLHttpRequest != undefined
+                ? new XMLHttpRequest()
+                : new ActiveXObject('Microsoft.XMLHTTP');
+            //2. Declare the type of the response
+            xhr.responseType = 'json';
+            //3. Listen to the changes in states within the connection
+            xhr.onreadystatechange = function(){
+                switch(xhr.readyState){
+                    case 0:console.log('UNSENT');break;
+                    case 1:console.log('OPENED');break;
+                    case 2:console.log('HEADERS RECEIVED');console.log(this.getAllResponseHeaders());break;
+                    case 3:console.log('LOADING');break;
+                    case 4:default:
+                    console.log('LOADED');
+                    //If status equals 200 then everything is ok else nok
+                    if(xhr.status == 200){
+                        console.log('OK');
+                        //Get the received data --> response
+                        var data = (!xhr.responseType)?JSON.parse(xhr.response):xhr.response;
+                        var speelterreinen = data.speelterreinen, n = speelterreinen.length, speelterrein = null;
+                        var tempString_2 ="";
+                        for(var i=0; i<n; i++) {
+                            speelterrein = speelterreinen[i];
+                            console.log(speelterrein);
+                            tempString_2 += '<div id="speelterrein_id" class="card blue-grey darken-1 z-depth-2">';
+                            tempString_2 += '<div class="card-content white-text">';
+                            tempString_2 += '<span class="card-title" >' +speelterrein.naam;
+                            tempString_2 += '</span>';
+                            tempString_2 += '<h5>Functies</h5><p>' + speelterrein.functies;
+                            tempString_2 += '<div class="card-action"><a target="_blank" class="waves-effect waves-light btn" href="' + speelterrein.plaats;
+                            tempString_2 += '">Locatie</a>'
+                            tempString_2 += '</div></div></div>';
+
+
+
+
+                        console.log(speelterrein.coördinaten);
+                        document.getElementById("speelterrein_id").innerHTML=tempString_2
+                        }
+                    }else {
+                        console.log(Error(xhr.status));
+                    }
+                    break;
+                }
+
+            };
+            //4. Open the connection or tunnel to the resource on the url
+            xhr.open('GET', this.URLSPEEL, true);
+            //5. Make the request to the specified resource
+            xhr.send(null);
+        }
+    };
+
+    App.init();
+
+});
+
+
+/******************************************************Google maps**********************************/
 
