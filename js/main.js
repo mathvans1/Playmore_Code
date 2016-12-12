@@ -90,7 +90,7 @@ ready(function(){
                             tempString += '">' + school.ExtendedData.SchemaData.SimpleData[15]['#text'];
                             tempString += '</a>';
                             tempString += '<div class="card-action">';
-                            tempString += '<a class="waves-effect waves-light btn" href="' + school.ExtendedData.SchemaData.SimpleData[17]['#text'];
+                            tempString += '<a target="_blank" class="waves-effect waves-light btn" href="' + school.ExtendedData.SchemaData.SimpleData[17]['#text'];
                             tempString += '">Website</a>';
                             tempString += '</div>';
                             tempString += '</div>';

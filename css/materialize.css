@@ -6063,7 +6063,7 @@ textarea.materialize-textarea + label:after {
 }
 
 .input-field input[type=search]:focus {
-  background-color: #fff;
+  background-color: grey;
   border: 0;
   box-shadow: none;
   color: #444;
