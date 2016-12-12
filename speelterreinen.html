@@ -62,7 +62,7 @@
 <!-----------------------------------------------------------end nav---------------------------------------------------------->
 <main>
     <div class="row">
-
+            <!--Sidenav-------------------------------------->
         <div class="col s3 main_gone z-depth-1 grey lighten-3">
 
             <div class="col ">
@@ -111,7 +111,14 @@
 
         </div>
 
+        <!--End side nav en navigatie------------------------------------------------------------------->
+
         <div class="col l9 s12 m12">
+            <div class="row">
+                <div class="container">
+                    <div id="map-canvas" class="col s12 m12 z-depth-2 ">
+                </div>
+            </div>
             <div class="row">
                 <div class="container">
                     <!--Filter-->
@@ -164,22 +171,27 @@
                     <!--Filter end-->
 
 
-                    <div class="col s12 m12">
-                        <div class="card blue-grey darken-1 z-depth-2">
-                            <div class="card-content white-text">
-                                <span class="card-title">Card Title</span>
-                                <p>I am a very simple card. I am good at containing small bits of information.
-                                    I am convenient because I require little markup to use effectively.</p>
-                            </div>
-                            <div class="card-action">
-                                <a href="#">This is a link</a>
-                                <a href="#">This is a link</a>
-                            </div>
-                        </div>
+
+
+
+
+
+                    <div id="speelterrein_id" class="col s12 m12">
+
                     </div>
                 </div>
             </div>
         </div>
+
+        <!--Back to top button-->
+        <div class="fixed-action-btn">
+            <a href="#top" class="backToTop btn-floating btn-large waves-effect waves-light ">
+                <i class="material-icons">arrow_upward</i>
+            </a>
+        </div>
+        <!--End back to top button-->
+
+
     </div>
 </main>
 
@@ -216,6 +228,7 @@
 <!------------------------------------------Import jQuery before materialize.js-------------------------------------------------->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="js/bin/materialize.min.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUfDg2aCoX8G-0Dmwq53ulKRAsfUcy1uI&callback=initMap"></script>
 <script type="text/javascript" src="js/login.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 

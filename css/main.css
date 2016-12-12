@@ -27,3 +27,7 @@ main {
 .slide-nav{
     background-color: #2a7ae2;
 }
+#map-canvas{
+    height: 500px;
+
+}
