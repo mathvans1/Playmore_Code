@@ -156,21 +156,16 @@ ready(function(){
                         var tempString_2 ="";
                         for(var i=0; i<n; i++) {
                             speelterrein = speelterreinen[i];
-                            console.log(speelterrein);
+                            /*console.log(speelterrein);*/
                             tempString_2 += '<div id="speelterrein_id" class="card blue-grey darken-1 z-depth-2">';
                             tempString_2 += '<div class="card-content white-text">';
                             tempString_2 += '<span class="card-title" >' +speelterrein.naam;
                             tempString_2 += '</span>';
                             tempString_2 += '<h5>Functies</h5><p>' + speelterrein.functies;
                             tempString_2 += '<div class="card-action"><a target="_blank" class="waves-effect waves-light btn" href="' + speelterrein.plaats;
-                            tempString_2 += '">Locatie</a>'
+                            tempString_2 += '">Locatie</a>';
                             tempString_2 += '</div></div></div>';
-
-
-
-
-                        console.log(speelterrein.coördinaten);
-                        document.getElementById("speelterrein_id").innerHTML=tempString_2
+                            document.getElementById("speelterrein_id").innerHTML=tempString_2
                         }
                     }else {
                         console.log(Error(xhr.status));
@@ -193,3 +188,31 @@ ready(function(){
 
 /******************************************************Google maps**********************************/
 
+var map;
+function initMap() {
+    map = new google.maps.Map(document.getElementById('map-canvas'), {
+        zoom: 14,
+        center: new google.maps.LatLng(51.0520781,3.7148216),
+        mapTypeId: 'terrain'
+    });
+
+    // Create a <script> tag and set the USGS URL as the source.
+    var script = document.createElement('script');
+    // This example uses a local copy of the GeoJSON stored at
+    // http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp
+    script.src = 'https://developers.google.com/maps/documentation/javascript/examples/json/earthquake_GeoJSONP.js';
+    document.getElementsByTagName('head')[0].appendChild(script);
+}
+
+// Loop through the results array and place a marker for each
+// set of coordinates.
+window.eqfeed_callback = function(results) {
+    for (var i = 0; i < results.features.length; i++) {
+        var coords = results.features[i].geometry.coordinates;
+        var latLng = new google.maps.LatLng(coords[1],coords[0]);
+        var marker = new google.maps.Marker({
+            position: latLng,
+            map: map
+        });
+    }
+}

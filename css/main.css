@@ -28,6 +28,6 @@ main {
     background-color: #2a7ae2;
 }
 #map-canvas{
-    height: 100%;
-    background-color: red;
+    height: 500px;
+
 }
