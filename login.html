@@ -21,6 +21,9 @@
     <meta name="theme-color" content="#ffffff">
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="https://www.gstatic.com/firebasejs/3.6.3/firebase.js"></script>
+
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <link type="text/css" rel="stylesheet" href="css/main.css">
@@ -61,45 +64,17 @@
 <main>
     <div class="row">
         <div class="container">
-            <div id="login-page" class="row">
-                <div class="col s12 z-depth-2 card-panel">
-                    <form class="login-form">
-                        <div class="row">
-                            <div class="input-field col s12 center">
-                                <i class="material-icons prefix large">account_circle</i>
+            <div class="row">
+                <div class="col s6">
+                    <input id="txtEmail" type="email" placeholder="Email">
 
-                            </div>
-                        </div>
-                        <div class="row margin">
-                            <div class="input-field col s12">
-                                <i class="mdi-social-person-outline prefix"></i>
-                                <input id="logname" type="text">
-                                <label for="logname" >Username</label>
-                            </div>
-                        </div>
-                        <div class="row margin">
-                            <div class="input-field col s12">
-                                <i class="mdi-action-lock-outline prefix"></i>
-                                <input id="logpw" type="password">
-                                <label for="logpw">Password</label>
-                            </div>
-                        </div>
-                        <div class="row">
+                    <input id="txtPassword" type="password" placeholder="Password">
 
-                            <div class="input-field col s12">
-                                <div class="center-align"><a id="login_btn" class="btn waves-effect waves-light" type="submit"  onclick="check()">Login</a></div>
-                            </div>
+                    <button id="btnLogin" class="btn waves-effect waves-light">Log In</button>
 
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <div class="center-align"><a href="register.html" class="btn waves-effect waves-light">Registreer hier</a></div>
-                            </div>
+                    <button id="btnSignUp" class="btn waves-effect waves-light blue">Sign Up</button>
 
-                        </div>
-
-
-                    </form>
+                    <button id="btnLogout" class="btn waves-effect waves-light hide">Log Out</button>
                 </div>
             </div>
         </div>
@@ -133,9 +108,11 @@
 
 
 <!------------------------------------------Import jQuery before materialize.js-------------------------------------------------->
+<script type="text/javascript" src="js/app.js"></script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="js/bin/materialize.min.js"></script>
 <script type="text/javascript" src="js/login.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
+
 </body>
 </html>
