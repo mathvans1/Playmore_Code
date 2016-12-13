@@ -98,6 +98,18 @@ ready(function () {
                 document.getElementById("go").onclick = function () {
                     updateScholenToHtml(getFilteredScholen(alleScholen));
                 };
+                document.getElementById("katholiek_onderwijs_filter").onclick = function () {
+                    updateScholenToHtml(getFilteredScholen(alleScholen));
+                };
+                document.getElementById("stedelijk_onderwijs_filter").onclick = function () {
+                    updateScholenToHtml(getFilteredScholen(alleScholen));
+                };
+                document.getElementById("oko_filter").onclick = function () {
+                    updateScholenToHtml(getFilteredScholen(alleScholen));
+                };
+                document.getElementById("go_filter").onclick = function () {
+                    updateScholenToHtml(getFilteredScholen(alleScholen));
+                };
             };
             var alleScholen;
             LoadScholenFromJSON = function () {
@@ -114,6 +126,7 @@ ready(function () {
             getFilteredScholen = function () {
                 var filteredScholen = [];
                 var school;
+                console.log(document.getElementById("katholiek_onderwijs_filter").checked);
                 if (document.getElementById("katholiek_onderwijs").checked === true || document.getElementById("katholiek_onderwijs_filter").checked === true) {
                     for (var i = 0; i < alleScholen.length; i++) {
                         school = alleScholen[i];
