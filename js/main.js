@@ -10,6 +10,7 @@ var regiPw = document.getElementById('regpw');
 function store() {
     localStorage.setItem('uName', regiName.value);
     localStorage.setItem('pw', regiPw.value);
+    window.location.href = "login.html"
 }
 
 function check() {
@@ -41,7 +42,7 @@ function ready(cb) {
         ? setTimeout(ready.bind(null, cb), 90)
         : cb();
 }
-;
+
 
 ready(function () {
 
@@ -216,7 +217,6 @@ $(document).ready(function () {
 
 /*Speelterein**************************************************************************************/
 
-
 ready(function () {
 
     var App = {
@@ -254,22 +254,37 @@ ready(function () {
                         if (xhr.status == 200) {
                             console.log('OK');
                             //Get the received data --> response
+
                             var data = (!xhr.responseType) ? JSON.parse(xhr.response) : xhr.response;
                             var speelterreinen = data.speelterreinen, n = speelterreinen.length, speelterrein = null;
                             var tempString_2 = "";
                             for (var i = 0; i < n; i++) {
                                 speelterrein = speelterreinen[i];
-                                console.log(speelterrein);
                                 tempString_2 += '<div id="speelterrein_id" class="card blue-grey darken-1 z-depth-2">';
                                 tempString_2 += '<div class="card-content white-text">';
                                 tempString_2 += '<span class="card-title" >' + speelterrein.naam;
                                 tempString_2 += '</span>';
                                 tempString_2 += '<h5>Functies</h5><p>' + speelterrein.functies;
                                 tempString_2 += '<div class="card-action"><a target="_blank" class="waves-effect waves-light btn" href="' + speelterrein.plaats;
-                                tempString_2 += '">Locatie</a>'
+                                tempString_2 += '">Locatie</a>';
                                 tempString_2 += '</div></div></div>';
-                                //console.log(speelterrein.coördinaten);
-                                document.getElementById("speelterrein_id").innerHTML = tempString_2
+                               /* console.log(speelterrein.coördinaten);*/
+                                document.getElementById("speelterrein_id").innerHTML = tempString_2;
+
+                                var latLng = new google.maps.LatLng(speelterrein.coördinaten.split(',')[0], speelterrein.coördinaten.split(',')[1]);
+                                var marker = new google.maps.Marker({
+                                    position: latLng,
+                                    icon: './assets/marker/marker.png',
+                                    map: map
+                                });
+                                var contentString = '';
+
+                                var infowindow = new google.maps.InfoWindow({
+                                    content: contentString
+                                });
+                                marker.addListener('click', function() {
+                                    infowindow.open(map, marker);
+                                });
                             }
                         } else {
                             console.log(Error(xhr.status));
@@ -287,3 +302,13 @@ ready(function () {
     App.init();
 });
 /******************************************************Google maps**********************************/
+console.log(coordinatenVar);
+var map;
+function initMap() {
+    map = new google.maps.Map(document.getElementById('map-canvas'), {
+        zoom: 12,
+        center: new google.maps.LatLng(51.0546539,3.7235797),
+        mapTypeId: 'terrain'
+    });
+
+}
