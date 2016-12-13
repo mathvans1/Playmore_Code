@@ -29,5 +29,11 @@ main {
 }
 #map-canvas{
     height: 500px;
+}
 
+#mapContent{
+    font:Roboto;
+}
+#titlemap{
+    font-weight:bold ;
 }
