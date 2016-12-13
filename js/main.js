@@ -170,6 +170,10 @@ ready(function () {
             updateScholenToHtml = function (scholen) {
                 var n = scholen.length;
                 var tempString = "";
+                var infowindow = new google.maps.InfoWindow({
+                    content: contentString,
+                    maxWidth: 300
+                });
                 for (var i = 0; i < n; i++) {
                     school = scholen[i];
 
@@ -195,6 +199,28 @@ ready(function () {
                     tempString += '</div>';
                     document.getElementById("school_name").innerHTML = tempString;
                     document.getElementById("aantal_scholen").innerHTML = aantalScholen;
+
+                    /*console.log(school.Point.coordinates);*/
+
+
+                    /*Googlemaps*/
+                    var latLng = new google.maps.LatLng(school.Point.coordinates[1],school.Point.coordinates[0]);
+                    var contentString = school.ExtendedData.SchemaData.SimpleData[3];
+
+                    var marker = new google.maps.Marker({
+                        position: latLng,
+                        icon: './assets/marker/marker.png',
+                        /*title: school.ExtendedData.SchemaData.SimpleData[3],*/
+                        animation: google.maps.Animation.DROP,
+                        map: map,
+                        html: contentString
+                    });
+                    marker.addListener('click', function() {
+                        infowindow.setContent(this.html);
+                        infowindow.open(map, this);
+                    });
+
+
                 }
             };
             //4. Open the connection or tunnel to the resource on the url
@@ -258,8 +284,14 @@ ready(function () {
                             var data = (!xhr.responseType) ? JSON.parse(xhr.response) : xhr.response;
                             var speelterreinen = data.speelterreinen, n = speelterreinen.length, speelterrein = null;
                             var tempString_2 = "";
+                            var infowindow = new google.maps.InfoWindow({
+                                content: contentString,
+                                maxWidth: 300
+                            });
+
                             for (var i = 0; i < n; i++) {
                                 speelterrein = speelterreinen[i];
+                                console.log(speelterrein.length);
                                 tempString_2 += '<div id="speelterrein_id" class="card blue-grey darken-1 z-depth-2">';
                                 tempString_2 += '<div class="card-content white-text">';
                                 tempString_2 += '<span class="card-title" >' + speelterrein.naam;
@@ -270,21 +302,25 @@ ready(function () {
                                 tempString_2 += '</div></div></div>';
                                /* console.log(speelterrein.coördinaten);*/
                                 document.getElementById("speelterrein_id").innerHTML = tempString_2;
-
+                                /*Googlemaps*/
                                 var latLng = new google.maps.LatLng(speelterrein.coördinaten.split(',')[0], speelterrein.coördinaten.split(',')[1]);
+
+                                var contentString ='<div id="mapContent">' +  '<p id="title_map">' + speelterrein.naam + '</p>' + '<p>' + speelterrein.functies + '</div>';
+
                                 var marker = new google.maps.Marker({
                                     position: latLng,
                                     icon: './assets/marker/marker.png',
-                                    map: map
-                                });
-                                var contentString = '';
-
-                                var infowindow = new google.maps.InfoWindow({
-                                    content: contentString
+                                    title: speelterrein.naam,
+                                    animation: google.maps.Animation.DROP,
+                                    map: map,
+                                    html: contentString
                                 });
                                 marker.addListener('click', function() {
-                                    infowindow.open(map, marker);
+                                    infowindow.setContent(this.html);
+                                    infowindow.open(map, this);
                                 });
+
+
                             }
                         } else {
                             console.log(Error(xhr.status));
@@ -302,7 +338,6 @@ ready(function () {
     App.init();
 });
 /******************************************************Google maps**********************************/
-console.log(coordinatenVar);
 var map;
 function initMap() {
     map = new google.maps.Map(document.getElementById('map-canvas'), {
