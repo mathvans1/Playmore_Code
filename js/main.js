@@ -357,7 +357,7 @@ function clickCounter() {
         } else {
             localStorage.clickcount = 1;
         }
-        document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+        document.getElementById("result").innerHTML = "Dit project is al " + localStorage.clickcount + " keer geliked!";
     } else {
         document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
     }
