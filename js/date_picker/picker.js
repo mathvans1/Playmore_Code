@@ -254,7 +254,7 @@ function PickerConstructor( ELEMENT, NAME, COMPONENT, OPTIONS ) {
                         var target = event.target
 
                         // If the target of the event is not the element, close the picker picker.
-                        // * Don’t worry about clicks or focusins on the root because those don’t bubble up.
+                        // * Don’t worry about likes or focusins on the root because those don’t bubble up.
                         //   Also, for Firefox, a click on an `option` element bubbles up directly
                         //   to the doc. So make sure the target wasn't the doc.
                         // * In Firefox stopPropagation() doesn’t prevent right-click events from bubbling,

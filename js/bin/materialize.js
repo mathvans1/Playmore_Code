@@ -3618,7 +3618,7 @@ $(document).ready(function(){
           $slides.each(function( index ) {
             var $indicator = $('<li class="indicator-item"></li>');
 
-            // Handle clicks on indicators
+            // Handle likes on indicators
             $indicator.click(function () {
               var $parent = $slider.parent();
               var curr_index = $parent.find($(this)).index();
@@ -4953,7 +4953,7 @@ function PickerConstructor( ELEMENT, NAME, COMPONENT, OPTIONS ) {
                         var target = event.target
 
                         // If the target of the event is not the element, close the picker picker.
-                        // * Don’t worry about clicks or focusins on the root because those don’t bubble up.
+                        // * Don’t worry about likes or focusins on the root because those don’t bubble up.
                         //   Also, for Firefox, a click on an `option` element bubbles up directly
                         //   to the doc. So make sure the target wasn't the doc.
                         // * In Firefox stopPropagation() doesn’t prevent right-click events from bubbling,
@@ -7395,7 +7395,7 @@ Picker.extend( 'pickadate', DatePicker )
               $indicator.addClass('active');
             }
 
-            // Handle clicks on indicators.
+            // Handle likes on indicators.
             $indicator.click(function () {
               var index = $(this).index();
               cycleTo(index);
@@ -7575,7 +7575,7 @@ Picker.extend( 'pickadate', DatePicker )
         }
 
         function click(e) {
-          // Disable clicks if carousel was dragged.
+          // Disable likes if carousel was dragged.
           if (dragged) {
             e.preventDefault();
             e.stopPropagation();
@@ -7585,7 +7585,7 @@ Picker.extend( 'pickadate', DatePicker )
             var clickedIndex = $(e.target).closest('.carousel-item').index();
             var diff = (center % count) - clickedIndex;
 
-            // Disable clicks if carousel was shifted by click
+            // Disable likes if carousel was shifted by click
             if (diff !== 0) {
               e.preventDefault();
               e.stopPropagation();

@@ -107,7 +107,7 @@
           $slides.each(function( index ) {
             var $indicator = $('<li class="indicator-item"></li>');
 
-            // Handle clicks on indicators
+            // Handle likes on indicators
             $indicator.click(function () {
               var $parent = $slider.parent();
               var curr_index = $parent.find($(this)).index();

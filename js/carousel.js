@@ -71,7 +71,7 @@
               $indicator.addClass('active');
             }
 
-            // Handle clicks on indicators.
+            // Handle likes on indicators.
             $indicator.click(function () {
               var index = $(this).index();
               cycleTo(index);
@@ -251,7 +251,7 @@
         }
 
         function click(e) {
-          // Disable clicks if carousel was dragged.
+          // Disable likes if carousel was dragged.
           if (dragged) {
             e.preventDefault();
             e.stopPropagation();
@@ -261,7 +261,7 @@
             var clickedIndex = $(e.target).closest('.carousel-item').index();
             var diff = (center % count) - clickedIndex;
 
-            // Disable clicks if carousel was shifted by click
+            // Disable likes if carousel was shifted by click
             if (diff !== 0) {
               e.preventDefault();
               e.stopPropagation();
