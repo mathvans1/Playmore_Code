@@ -362,3 +362,29 @@ function clickCounter() {
         document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
     }
 }
+
+function clickCounter2() {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.clickcount3) {
+            localStorage.clickcount3 = Number(localStorage.clickcount3)+1;
+        } else {
+            localStorage.clickcount3 = 1;
+        }
+        document.getElementById("result2").innerHTML = "Dit project is al " + localStorage.clickcount3 + " keer geliked!";
+    } else {
+        document.getElementById("result2").innerHTML = "Sorry, your browser does not support web storage...";
+    }
+}
+
+function clickCounter3() {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.clickcount3) {
+            localStorage.clickcount3 = Number(localStorage.clickcount3)+1;
+        } else {
+            localStorage.clickcount3 = 1;
+        }
+        document.getElementById("result3").innerHTML = "Dit project is al " + localStorage.clickcount3 + " keer geliked!";
+    } else {
+        document.getElementById("result3").innerHTML = "Sorry, your browser does not support web storage...";
+    }
+}
