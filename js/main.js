@@ -204,13 +204,14 @@ ready(function () {
 
 
                     /*Googlemaps*/
-                    var latLng = new google.maps.LatLng(school.Point.coordinates[1],school.Point.coordinates[0]);
-                    var contentString = school.ExtendedData.SchemaData.SimpleData[3];
-
+                    var latLng = new google.maps.LatLng(school.Point.coordinates.split(',')[1],school.Point.coordinates.split(',')[0]);
+                    var contentString ='<div id="mapContent">' +  '<p id="title_map">' + title + '</p>' + '<p>' + adres + '</div>';
+                    var title = school.ExtendedData.SchemaData.SimpleData[3]['#text'];
+                    var adres = school.ExtendedData.SchemaData.SimpleData[1]['#text'] + ' ' + school.ExtendedData.SchemaData.SimpleData[14]['#text'];
                     var marker = new google.maps.Marker({
                         position: latLng,
                         icon: './assets/marker/marker.png',
-                        /*title: school.ExtendedData.SchemaData.SimpleData[3],*/
+                        title: title,
                         animation: google.maps.Animation.DROP,
                         map: map,
                         html: contentString
@@ -304,7 +305,6 @@ ready(function () {
                                 document.getElementById("speelterrein_id").innerHTML = tempString_2;
                                 /*Googlemaps*/
                                 var latLng = new google.maps.LatLng(speelterrein.coördinaten.split(',')[0], speelterrein.coördinaten.split(',')[1]);
-
                                 var contentString ='<div id="mapContent">' +  '<p id="title_map">' + speelterrein.naam + '</p>' + '<p>' + speelterrein.functies + '</div>';
 
                                 var marker = new google.maps.Marker({
