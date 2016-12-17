@@ -22,6 +22,7 @@
         const email = txtEmail.value;
         const pass = txtPassword.value;
         const auth = firebase.auth();
+        window.location.assign(href="index.html");
         //sign in
         const promise = auth.signInWithEmailAndPassword(email, pass);
         promise.catch(e => console.log(e.message));
@@ -40,6 +41,7 @@
         promise.catch(e => console.log(e.message));
     });
 
+
     btnLogout.addEventListener('click', e => {
        firebase.auth().signOut();
     });
@@ -47,11 +49,19 @@
     //Add realtime listner
     firebase.auth().onAuthStateChanged(firebaseUser => {
        if(firebaseUser){
-           console.log(firebaseUser);
+           console.log(firebaseUser.email);
            btnLogout.classList.remove('hide');
        } else {
            console.log('not logged in');
            btnLogout.classList.add('hide');
         }
+    var showName = document.getElementById("showName");
+    showName.innerHTML(firebaseUser.email);
     });
+
+
+
+
+
+
 }());

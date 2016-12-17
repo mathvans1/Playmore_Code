@@ -365,12 +365,12 @@ function clickCounter() {
 
 function clickCounter2() {
     if(typeof(Storage) !== "undefined") {
-        if (localStorage.clickcount3) {
-            localStorage.clickcount3 = Number(localStorage.clickcount3)+1;
+        if (localStorage.clickcount2) {
+            localStorage.clickcount2 = Number(localStorage.clickcount2)+1;
         } else {
-            localStorage.clickcount3 = 1;
+            localStorage.clickcount2 = 1;
         }
-        document.getElementById("result2").innerHTML = "Dit project is al " + localStorage.clickcount3 + " keer geliked!";
+        document.getElementById("result2").innerHTML = "Dit project is al " + localStorage.clickcount2 + " keer geliked!";
     } else {
         document.getElementById("result2").innerHTML = "Sorry, your browser does not support web storage...";
     }
@@ -388,3 +388,4 @@ function clickCounter3() {
         document.getElementById("result3").innerHTML = "Sorry, your browser does not support web storage...";
     }
 }
+
