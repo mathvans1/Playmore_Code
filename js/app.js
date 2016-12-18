@@ -22,7 +22,7 @@
         const email = txtEmail.value;
         const pass = txtPassword.value;
         const auth = firebase.auth();
-        window.location.assign(href="index.html");
+        /*window.location.assign(href="index.html");*/
         //sign in
         const promise = auth.signInWithEmailAndPassword(email, pass);
         promise.catch(e => console.log(e.message));
@@ -55,7 +55,7 @@
            console.log('not logged in');
            btnLogout.classList.add('hide');
         }
-    var showName = document.getElementById("showName");
+    var showName = document.getElementById("showname");
     showName.innerHTML(firebaseUser.email);
     });
 
