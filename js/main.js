@@ -302,7 +302,7 @@ ready(function () {
                                 tempString_2 += '<div class="card-action"><a target="_blank" class="waves-effect waves-light btn" href="' + speelterrein.plaats;
                                 tempString_2 += '">Locatie</a>';
                                 tempString_2 += '</div></div></div>';
-                               /* console.log(speelterrein.coördinaten);*/
+                                console.log(speelterrein.functies);
                                 document.getElementById("speelterrein_id").innerHTML = tempString_2;
                                 /*Googlemaps*/
                                 var latLng = new google.maps.LatLng(speelterrein.coördinaten.split(',')[0], speelterrein.coördinaten.split(',')[1]);
