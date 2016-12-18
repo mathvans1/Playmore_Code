@@ -210,12 +210,13 @@ ready(function () {
                     var adres = school.ExtendedData.SchemaData.SimpleData[1]['#text'] + ' ' + school.ExtendedData.SchemaData.SimpleData[14]['#text'];
                     var marker = new google.maps.Marker({
                         position: latLng,
-                        icon: './assets/marker/marker.png',
+                        icon: './assets/marker/marker_school-01.png',
                         title: title,
                         animation: google.maps.Animation.DROP,
                         map: map,
                         html: contentString
                     });
+
                     marker.addListener('click', function() {
                         infowindow.setContent(this.html);
                         infowindow.open(map, this);
@@ -309,7 +310,7 @@ ready(function () {
 
                                 var marker = new google.maps.Marker({
                                     position: latLng,
-                                    icon: './assets/marker/marker.png',
+                                    icon: './assets/marker/marker_speel.png',
                                     title: speelterrein.naam,
                                     animation: google.maps.Animation.DROP,
                                     map: map,
