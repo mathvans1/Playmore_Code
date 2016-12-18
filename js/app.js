@@ -22,7 +22,11 @@
         const email = txtEmail.value;
         const pass = txtPassword.value;
         const auth = firebase.auth();
+<<<<<<< HEAD
         /*window.location.assign(href="index.html");*/
+=======
+        //window.location.assign(href="index.html");
+>>>>>>> origin/master
         //sign in
         const promise = auth.signInWithEmailAndPassword(email, pass);
         promise.catch(e => console.log(e.message));
