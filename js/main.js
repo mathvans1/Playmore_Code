@@ -35,6 +35,8 @@ $(document).ready(function () {
     $('.parallax').parallax();
 });
 
+var prevMarkers = [], newMarkers = [];
+
 
 /*Scholen************************************************************************************************/
 function ready(cb) {
@@ -174,6 +176,7 @@ ready(function () {
                     content: contentString,
                     maxWidth: 300
                 });
+                newMarkers = [];
                 for (var i = 0; i < n; i++) {
                     school = scholen[i];
 
@@ -222,8 +225,15 @@ ready(function () {
                         infowindow.open(map, this);
                     });
 
+                    newMarkers.push(marker);
+
 
                 }
+
+                for(var j=0;j<prevMarkers.length;j++) {
+                    prevMarkers[j].setMap(null);
+                }
+                prevMarkers = newMarkers;
             };
             //4. Open the connection or tunnel to the resource on the url
             xhr.open('GET', this.URLSCHOOL, true);
@@ -338,6 +348,7 @@ ready(function () {
     };
     App.init();
 });
+
 /******************************************************Google maps**********************************/
 var map;
 function initMap() {
