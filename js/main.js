@@ -293,7 +293,6 @@ ready(function () {
 
                             for (var i = 0; i < n; i++) {
                                 speelterrein = speelterreinen[i];
-                                console.log(speelterrein.length);
                                 tempString_2 += '<div id="speelterrein_id" class="card blue-grey darken-1 z-depth-2">';
                                 tempString_2 += '<div class="card-content white-text">';
                                 tempString_2 += '<span class="card-title" >' + speelterrein.naam;
@@ -302,8 +301,16 @@ ready(function () {
                                 tempString_2 += '<div class="card-action"><a target="_blank" class="waves-effect waves-light btn" href="' + speelterrein.plaats;
                                 tempString_2 += '">Locatie</a>';
                                 tempString_2 += '</div></div></div>';
-                                console.log(speelterrein.functies);
+
                                 document.getElementById("speelterrein_id").innerHTML = tempString_2;
+
+
+                                keyword = 'petanque';
+                                petanque_places = data.speelterreinen.filter(x => x.functies.includes(keyword));
+                                console.log(petanque_places);
+
+
+
                                 /*Googlemaps*/
                                 var latLng = new google.maps.LatLng(speelterrein.coördinaten.split(',')[0], speelterrein.coördinaten.split(',')[1]);
                                 var contentString ='<div id="mapContent">' +  '<p id="title_map">' + speelterrein.naam + '</p>' + '<p>' + speelterrein.functies + '</div>';
