@@ -35,7 +35,7 @@ $(document).ready(function () {
     $('.parallax').parallax();
 });
 
-var prevMarkers = [], newMarkers = [];
+var prevMarkers = [], newMarkers = [], petMartkers = [];
 
 
 /*Scholen************************************************************************************************/
@@ -313,21 +313,19 @@ ready(function () {
                                 tempString_2 += '</div></div></div>';
 
                                 document.getElementById("speelterrein_id").innerHTML = tempString_2;
+                            }// end for
+                            keyword = 'voetbal';
+                            petanque_places = data.speelterreinen.filter(x => x.functies.includes(keyword));
+                            console.log(petanque_places);
 
-
-                                keyword = 'petanque';
-                                petanque_places = data.speelterreinen.filter(x => x.functies.includes(keyword));
-                                console.log(petanque_places);
-
-
-
-                                /*Googlemaps*/
-                                var latLng = new google.maps.LatLng(speelterrein.coördinaten.split(',')[0], speelterrein.coördinaten.split(',')[1]);
+                            for(var p=0;p<petanque_places.length;p++) { /*Googlemaps*/
+                                speelterrein = petanque_places[p];
+                                var latLng = new google.maps.LatLng(speelterrein['coördinaten'].split(',')[0], speelterrein['coördinaten'].split(',')[1]);
                                 var contentString ='<div id="mapContent">' +  '<p id="title_map">' + speelterrein.naam + '</p>' + '<p>' + speelterrein.functies + '</div>';
 
                                 var marker = new google.maps.Marker({
                                     position: latLng,
-                                    icon: './assets/marker/marker_speel.png',
+                                    icon: './assets/marker/marker.png',
                                     title: speelterrein.naam,
                                     animation: google.maps.Animation.DROP,
                                     map: map,
@@ -338,8 +336,11 @@ ready(function () {
                                     infowindow.open(map, this);
                                 });
 
-
+                                petMartkers.push(marker);
                             }
+                            console.log(petMartkers);
+
+
                         } else {
                             console.log(Error(xhr.status));
                         }
