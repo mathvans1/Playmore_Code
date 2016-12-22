@@ -1,0 +1,139 @@
+---
+layout: default
+---
+
+{% include nav_met_filter.html %}
+
+<main>
+    <div class="row">
+            <!--Sidenav-------------------------------------->
+        <div class="col s3 main_gone z-depth-1 grey lighten-3">
+
+            <div class="col ">
+                <h4>Speelterreinen</h4>
+                <form action="#">
+
+                    <h5>Functies</h5>
+                    <p>
+                        <input type="checkbox" id="voetbal" />
+                        <label for="voetbal">Voetbal</label>
+                    </p>
+
+                    <p>
+                        <input type="checkbox" id="petanque" />
+                        <label for="petanque">Petanque</label>
+                    </p>
+
+                    <p>
+                        <input type="checkbox" id="skate" />
+                        <label for="skate">Skate</label>
+                    </p>
+
+                    <p>
+                        <input type="checkbox" id="zandbak" />
+                        <label for="zandbak">Zandbak</label>
+                    </p>
+
+                    <p>
+                        <input type="checkbox" id="avontuurlijk_spelen" />
+                        <label for="avontuurlijk_spelen">Avontuurlijk spelen</label>
+                    </p>
+
+                    <p>
+                        <input type="checkbox" id="speeltoestellen" />
+                        <label for="speeltoestellen">Speeltoestellen</label>
+                    </p>
+
+                    <p>
+                        <input type="checkbox" id="basket" />
+                        <label for="basket">Basketbal</label>
+                    </p>
+
+
+                </form>
+            </div>
+
+        </div>
+
+        <!--End side nav en navigatie------------------------------------------------------------------->
+
+        <div class="col l9 s12 m12">
+            <div class="row">
+                    <div id="map-canvas" class="col s12 m12  ">
+            </div>
+            <div class="row">
+                <div class="container">
+                    <!--Filter-->
+                    <ul id="slide-out" class="side-nav">
+
+                        <div class="col ">
+                            <h4>Speelterreinen</h4>
+                            <form action="#">
+
+                                <h5>Functies</h5>
+                                <p>
+                                    <input type="checkbox" id="voetbal_filter" />
+                                    <label for="voetbal_filter">Voetbal</label>
+                                </p>
+
+                                <p>
+                                    <input type="checkbox" id="petanque_filter" />
+                                    <label for="petanque_filter">Petanque</label>
+                                </p>
+
+                                <p>
+                                    <input type="checkbox" id="skate_filter" />
+                                    <label for="skate_filter">Skate</label>
+                                </p>
+
+                                <p>
+                                    <input type="checkbox" id="zandbak_filter" />
+                                    <label for="zandbak_filter">Zandbak</label>
+                                </p>
+
+                                <p>
+                                    <input type="checkbox" id="avontuurlijk_spelen_filter" />
+                                    <label for="avontuurlijk_spelen_filter">Avontuurlijk spelen</label>
+                                </p>
+
+                                <p>
+                                    <input type="checkbox" id="speeltoestellen_filter" />
+                                    <label for="speeltoestellen_filter">Speeltoestellen</label>
+                                </p>
+
+                                <p>
+                                    <input type="checkbox" id="basket_filter" />
+                                    <label for="basket_filter">Basketbal</label>
+                                </p>
+
+
+                            </form>
+                        </div>
+                    </ul>
+                    <!--Filter end-->
+
+
+
+
+
+
+
+                    <div id="speelterrein_id" class="col s12 m12">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Back to top button-->
+        <div class="fixed-action-btn">
+            <a href="#top" class="backToTop btn-floating btn-large waves-effect waves-light ">
+                <i class="material-icons">arrow_upward</i>
+            </a>
+        </div>
+        <!--End back to top button-->
+
+
+    </div>
+    </div>
+</main>

@@ -1,0 +1,39 @@
+@media screen and (min-width: 992px) {
+    .mobile_gone{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .main_gone {display: none;}
+}
+
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+.logo {
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+
+.slide-nav{
+    background-color: #2a7ae2;
+}
+#map-canvas{
+    height: 500px;
+}
+
+#mapContent{
+    font:Roboto;
+}
+#titlemap{
+    font-weight:bold ;
+}

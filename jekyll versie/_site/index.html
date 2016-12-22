@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/assets/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <!--<link rel="manifest" href="/manifest.json">-->
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="https://www.gstatic.com/firebasejs/3.6.3/firebase.js"></script>
+
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="/css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="/css/main.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body>
+
+<!-------------------------------------------------------Start nav-------------------------------------------------------------->
+<nav class="teal">
+    <div class="nav-wrapper z-depth-2">
+        <a href="index.html" class="brand-logo logo"><img src="/assets/android-icon-48x48.png" /></a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
+
+        <ul class="right hide-on-med-and-down">
+            <li><a href="/index.html"><i class="material-icons">home</i></a></li>
+            <li><a href="/scholen/index.html">Scholen</a></li>
+            <li><a href="/speelterreinen/index.html">Speelterreinen</a></li>
+            <li><a href="/funding/index.html">Funding</a></li>
+            <li><a href="/contact/index.html">Contact</a></li>
+            <li><a href="/login/index.html"> <i class="material-icons">perm_identity</i></a></li>
+
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+            <li><a href="/index.html"><i class="material-icons">home</i></a></li>
+            <li><a href="/scholen/index.html">Scholen</a></li>
+            <li><a href="/speelterreinen/index.html">Speelterreinen</a></li>
+            <li><a href="/funding/index.html">Funding</a></li>
+            <li><a href="/contact/index.html">Contact</a></li>
+            <li><a href="/login/index.html"> <i class="material-icons">perm_identity</i></a></li>
+        </ul>
+    </div>
+</nav>
+<!-----------------------------------------------------------end nav---------------------------------------------------------->
+
+<main>
+
+
+    <div class="section white z-depth-2">
+        <div class="row container">
+            <h2 class="header center-align ">Play more</h2>
+            <h3 class="header center-align grey-text text-darken-2 ">De handige speel en schoolzoeker</h3>
+            <h5 class="grey-text text-darken-2 center-align"> Zoek makkelijk een school en speelterrein aan de hand
+                van een filter</h5>
+        </div>
+
+        <div class="row container">
+
+
+
+            <div class="center-align"><a href="/scholen/index.html" class="waves-effect waves-light btn">Scholen</a>
+                <a href="/speelterreinen/index.html" class="waves-effect waves-light btn">Speelterreinen</a></div>
+        </div>
+    </div>
+    <div class="parallax-container">
+        <div class="parallax"><img src="images/school2.png" /></div>
+    </div>
+
+    <div class="section white z-depth-2">
+        <div class="row container">
+
+            <h3 class="header center-align grey-text text-darken-2 ">Updates</h3>
+            <h5 class="grey-text text-darken-2 center-align">
+                Als er nieuwe scholen zijn bij gekomen vind u dit hier. Alsook de speelterreinen.
+            </h5>
+
+            <div class="center-align"><a class="waves-effect waves-light btn">Updates</a></div>
+        </div>
+    </div>
+
+    <div class="parallax-container">
+        <div class="parallax"><img src="images/school3.png" /></div>
+    </div>
+
+    <div class="section white ">
+        <div class="row container center-align">
+            <h4>Desing &amp; Development</h4><br />
+            <h5>Mathias Van Sele &amp; Jonatan Moerman</h5>
+        </div>
+
+    </div>
+
+
+</main>
+
+
+
+<!--Footer----------------------------------------------------------------------------------------------------------------------->
+<footer class="page-footer grey darken-1">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">PlayMore</h5>
+                <p class="grey-text text-lighten-4">De handige speel en schoolzoeker.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="/index.html">Home</a></li>
+                    <li><a class="grey-text text-lighten-3" href="/scholen/index.html">Scholen</a></li>
+                    <li><a class="grey-text text-lighten-3" href="/speelterreinen/index.html">Speelterreinen</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            © 2016 Made by Mathias Van Sele en Jonatan Moerman
+        </div>
+    </div>
+</footer>
+
+
+<script type="text/javascript" src="/js/smoothscroll.js"></script>
+<script type="text/javascript" src="/js/app.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="/js/bin/materialize.min.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUfDg2aCoX8G-0Dmwq53ulKRAsfUcy1uI&callback=initMap"></script>
+<script src="/js/main.js"></script>
+
+
+</body>
+</html>

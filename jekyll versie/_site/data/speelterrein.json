@@ -1,0 +1,143 @@
+{"speelterreinen":[
+  {
+    "naam": "Sint-Baafskouterpark",
+    "functies": ["avontuurlijk spelen", "zandbak", "speeltoestellen"],
+    "plaats": "https://goo.gl/maps/MKGME8NYhMF2",
+    "coördinaten": "51.0568047,3.7551683",
+    "gemeente": "Sint-Amandsberg"
+  },
+  {
+    "naam": "Wasstraat speelterrein",
+    "functies":["zandbak", "voetbal", "petanque", "speeltoestellen", "basketbal"],
+    "plaats": "https://goo.gl/maps/AtCguRTbgKo",
+    "coördinaten": "51.0553976,3.7442046",
+    "gemeente": "Sint-Amandsberg"
+  },
+  {
+    "naam": "Azaleastraat buurtpark",
+    "functies":["zandbak", "petanque", "speeltoestellen", "basketbal"],
+    "plaats": "https://goo.gl/maps/BQR6y8ZBYr32",
+    "coördinaten": "51.0600225,3.7498565",
+    "gemeente": "Sint-Amandsberg"
+  },
+  {
+    "naam": "Biest buurtpark",
+    "functies":["zandbak", "petanque", "speeltoestellen"],
+    "plaats": "https://goo.gl/maps/XN3YYK4BQzj",
+    "coördinaten": "51.0674544,3.7529963",
+    "gemeente": "Sint-Amandsberg"
+  },
+  {
+    "naam": "Sint-Bernadette Sapiniere",
+    "functies":["voetbal", "speeltoestellen"],
+    "plaats": "https://goo.gl/maps/GEbmYdZKTzK2",
+    "coördinaten": "51.071663,3.7504325",
+    "gemeente": "Sint-Amandsberg"
+  },
+  {
+    "naam": "Woongroen Scandinaviëstraat",
+    "functies":["avontuurlijk spelen", "petanque", "voetbal", "speeltoestellen"],
+    "plaats": "https://goo.gl/maps/m8re423EzFS2",
+    "coördinaten": "51.0698143,3.7400131",
+    "gemeente": "Gent"
+  },
+  {
+    "naam": "Heiveldstraat speelterrein",
+    "functies":["skate", "voetbal", "speeltostellen", "basketbal"],
+    "plaats": "https://goo.gl/maps/YP5JgcZ2t8v",
+    "coördinaten": "51.0670594,3.7747047",
+    "gemeente": "Sint-Amandsberg"
+  },
+  {
+    "naam": "Bijgaardepark",
+    "functies":["avontuurlijk spelen", "zandbak", "petanque", "speeltoestellen"],
+    "plaats": "https://goo.gl/maps/78yMu7KYZoM2",
+    "coördinaten": "51.0514688,3.7430226",
+    "gemeente": "Gent"
+  },
+  {
+    "naam": "Rommelwaterpark",
+    "functies":["zandbak", "voetbal", "petanque", "speeltoestellen"],
+    "plaats": "https://goo.gl/maps/HsV7HWTGXxT2",
+    "coördinaten": "51.0510954,3.7398092",
+    "gemeente": "Gent"
+  },
+  {
+    "naam": "Koningin Astridpark",
+    "functies":["zandbak", "speeltoestellen"],
+    "plaats": "https://goo.gl/maps/mdiM8Urxf1t",
+    "coördinaten": "51.0521841,3.7398228",
+    "gemeente": "Gent"
+  },
+  {
+    "naam": "Baudelopark",
+    "functies":["zandbak", "speeltoestellen", "basketbal"],
+    "plaats": "https://goo.gl/maps/UTf4EYUdf9B2",
+    "coördinaten": "51.058419,3.7305556",
+    "gemeente": "Gent"
+  },
+  {
+    "naam": "Park Zonder-Naamstraat",
+    "functies":["zandbak", "voetbal", "petanque", "speeltoestellen"],
+    "plaats": "https://goo.gl/maps/efnhjEk5PBp",
+    "coördinaten": "51.058419,3.7305556",
+    "gemeente": "Gent"
+  },
+  {
+    "naam": "Koning Albertpark",
+    "functies":["skate", "zandbak", "speeltoestellen"],
+    "plaats": "https://goo.gl/maps/nzVSK5YSgRB2",
+    "coördinaten": "51.0446038,3.7309271",
+    "gemeente": "Gent"
+  },
+  {
+    "naam": "Muinkpark",
+    "functies":["zandbak", "speeltoestellen"],
+    "plaats": "https://goo.gl/maps/DBd3FgSMfoz",
+    "coördinaten": "51.0446038,3.7309271",
+    "gemeente": "Gent"
+  },
+  {
+    "naam": "Keizerpark",
+    "functies":["skate", "speeltoestellen", "basketbal"],
+    "plaats": "https://goo.gl/maps/h3KgXTrMdgp",
+    "coördinaten": "51.0432227,3.7364445",
+    "gemeente": "Gent"
+  },
+  {
+    "naam": "Speelterrein Hollainhof",
+    "functies":["zandbak", "speeltoestellen"],
+    "plaats": "https://goo.gl/maps/1sztU9xJoXH2",
+    "coördinaten": "51.0439242,3.7364696",
+    "gemeente": "Gent"
+  },
+  {
+    "naam": "Victoria regiapark",
+    "functies":["avontuurlijk spelen", "speeltoestellen"],
+    "plaats": "https://goo.gl/maps/en2qR6HhYQx",
+    "coördinaten": "51.0420108,3.7429793",
+    "gemeente": "Gent"
+  },
+  {
+    "naam": "Groenevalleipark",
+    "functies":["avontuurlijk spelen", "zandbak", "voetbal", "speeltoestellen", "basketbal"],
+    "plaats": "https://goo.gl/maps/VgxRvoBhaW62",
+    "coördinaten": "51.0585613,3.7006164",
+    "gemeente": "Gent"
+  },
+  {
+    "naam": "Rabotpark",
+    "functies":["basketbal"],
+    "plaats": "https://goo.gl/maps/giMSmbUzABu",
+    "coördinaten": "51.0634973,3.7097313",
+    "gemeente": "Gent"
+  },
+  {
+    "naam": "Recreatieterrein Tolhuislaan",
+    "functies":["zandbak", "voetbal", "speeltoestellen", "baskebal"],
+    "plaats": "https://goo.gl/maps/WrTVEoSsMWB2",
+    "coördinaten": "51.0634127,3.72295",
+    "gemeente": "Gent"
+  }
+]}
+
